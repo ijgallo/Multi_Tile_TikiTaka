@@ -1,0 +1,51 @@
+# login
+ssh ijgallo@satori-login-001.mit.edu
+
+# creating conda env form .yalm
+conda env create -file py39.yaml -prefix /nobackup/users/ijgallo/aihwkit2
+
+# buiding aihwkit manually from git repository (after using yaml file to create environment)
+make build flags="-DUSE_CUDA=ON -DRPU_BLAS=OpenBLAS"
+
+# requesting exclusive access to gpus
+srun --gres=gpu:1 -N 1 --exclusive --mem=32G --time 4:00:00 --pty /bin/bash
+
+# monitor running job
+squeue --me
+
+
+
+
+
+# Jupyter Notebook but better
+# Login, request resources, activate environment
+jupyter notebook --no-browser --port=8888
+# On a different terminal window
+ssh -N -f -L localhost:8888:localhost:8888 ijgallo@satori-login-001.mit.edu
+# Open in browser
+http://localhost:8888
+
+
+# Connect to h100 cluster
+srun -p sched_oliva --gres=gpu:0 --mem=32G -c 24 --time 12:00:00 --pty /bin/bash
+# Activate conda for h100
+. /nobackup/users/ijgallo/conda_h100/minic/bin/activate
+conda activate aihwkith100
+python3 mnist_bl.py
+
+
+
+## Recompiling and installing aihwkit
+pip uninstall aihwkit
+cd aihwkit-master
+pip install -r requirements.txt
+mkdir build
+cd build
+export CMAKE_PREFIX_PATH=/home/ignacio/.local/lib/python3.10/site-packages/torch
+rm -rf *
+cmake -DCMAKE_PREFIX_PATH=/home/ignacio/.local/lib/python3.10/site-packages/torch -DCMAKE_CXX_FLAGS="-D_GLIBCXX_USE_CXX11_ABI=0" ..
+make
+cd ..
+pip install -e .
+
+
