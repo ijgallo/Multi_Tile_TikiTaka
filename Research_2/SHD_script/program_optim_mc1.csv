@@ -1,0 +1,7 @@
+Type,Tile,Op,Meta_op,Times,Pfactor,layer
+analog,main,forward,program,5097568,15.334905660377359,l1
+analog,main,update,program,5097568,15.334905660377359,l1
+analog,main,forward,program,1687040,15.616113744075829,l2
+analog,main,update,program,1687040,15.616113744075829,l2
+analog,main,forward,program,904064,14.963983050847459,l3
+analog,main,update,program,904064,14.963983050847459,l3
