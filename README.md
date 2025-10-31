@@ -36,7 +36,7 @@ It includes:
 ### ⚡ `Research_2/`
 Focuses on **scaling and analysis** of the proposed methods, including:
 - Experiments with **stochastic weight averaging (SWA)** and other temporal averaging strategies.  
-- Numerous scripts within the `SHD_script/` folder exploring algorithmic variations and configurations.  
+- Numerous scripts within the `SHD_script/` folder with different experiment setups. 
 - Experiments and results on the **MNIST** dataset, including **logging**, **energy estimation**, and **runtime analysis** (see `plot.ipynb`).
 
 ---
