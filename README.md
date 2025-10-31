@@ -11,12 +11,12 @@ Using **IBM’s [AIHWKit](https://github.com/IBM/aihwkit)** simulation framework
 Experiments on the **MNIST dataset** show that the parallel version maintains over **97 % accuracy** compared to standard Tiki-Taka implementations, while achieving a substantial reduction in training time.
 
 <p align="center">
-  <img src="images/jimenez_multitile_01.jpg" width="400"><br>
+  <img src="images/jimenez_multitile_01.jpg" width="500"><br>
   <em>Figure 1: Architecture diagram of the proposed multi-tile parallel processing approach for accelerated Tiki-Taka.</em>
 </p>
 
 <p align="center">
-  <img src="images/jimenez_multitile_02.jpg" width="400"><br>
+  <img src="images/jimenez_multitile_02.jpg" width="500"><br>
   <em>Figure 2: MNIST classification accuracy comparison between standard and parallel implementations, demonstrating maintained performance despite parallelization.</em>
 </p>
 
