@@ -1,7 +1,6 @@
 # Accelerated Analog In-Memory Computing for Neural Network Training
 
 **Authors:** I. J. Gallo, J. A. del Alamo  
-**Sponsorship:** MIT–IBM Watson AI Lab  
 
 Analog in-memory computing (AIMC) provides a promising route to accelerate neural network training by performing matrix–vector multiplications directly within memory arrays. This approach leverages the physical properties of analog devices such as protonic synapses to deliver significant improvements in energy efficiency and speed over conventional digital methods.
 
