@@ -22,6 +22,28 @@ Experiments on the **MNIST dataset** show that the parallel version maintains ov
 
 ---
 
+## Repository Overview
+
+This repository is organized as follows:
+
+### 🧩 `Research_1/`
+Contains didactic and from-scratch implementations of the basic **Tiki-Taka** algorithm in plain **PyTorch**, primarily in notebook format.  
+It includes:
+- Exploratory work on **AIHWKit** and its integration with Tiki-Taka.  
+- Early tests of **batched (multi-tile)** Tiki-Taka implementations.  
+- Experiments on small-scale toy problems, such as a **3-class spiral classification task**, to illustrate algorithmic behavior and validate functionality.
+
+### ⚡ `Research_2/`
+Focuses on **scaling and analysis** of the proposed methods, including:
+- Experiments with **stochastic weight averaging (SWA)** and other temporal averaging strategies.  
+- Numerous scripts within the `SHD_script/` folder exploring algorithmic variations and configurations.  
+- Experiments and results on the **MNIST** dataset, including **logging**, **energy estimation**, and **runtime analysis** (see `plot.ipynb`).
+
+---
+
+
+---
+
 ## Repository Structure and Notes
 
 The full source code of **AIHWKit** is included in this repository to ensure compatibility with the modified components used in our experiments.  
